@@ -2,9 +2,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 vim.opt.splitbelow = true
---vim.opt.splitrigt = true
+vim.opt.splitright = true
 
---vim.opt.wrap = false
+vim.opt.wrap = false
 
 vim.opt.expandtab = true
 
@@ -19,3 +19,7 @@ vim.opt.inccommand = "split"
 
 
 vim.opt.ignorecase = truelocal 
+
+vim.opt.termguicolors = true
+
+vim.g.mapleader = " "

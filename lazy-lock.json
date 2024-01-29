@@ -1,5 +1,8 @@
 {
   "kanagawa.nvim": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },
   "lazy.nvim": { "branch": "main", "commit": "aedcd79811d491b60d0a6577a9c1701063c2a609" },
-  "nvim-treesitter": { "branch": "master", "commit": "7b9973fca91d83a9baeb259e5663617154c0e55b" }
+  "lspsaga.nvim": { "branch": "main", "commit": "2198c07124bef27ef81335be511c8abfd75db933" },
+  "nvim-lspconfig": { "branch": "master", "commit": "8917d2c830e04bf944a699b8c41f097621283828" },
+  "nvim-treesitter": { "branch": "master", "commit": "95987ee2d6698577af45ae49261159fa624ea593" },
+  "nvim-treesitter-textobjects": { "branch": "master", "commit": "19a91a38b02c1c28c14e0ba468d20ae1423c39b2" }
 }
