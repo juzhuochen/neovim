@@ -6,6 +6,6 @@ return {
                 on_attach = on_attach,
                 cmd = {"clangd"},
                 filetypes = {"c", "cpp", "h", "hpp","cuda"},
-              }),
-        end
+              })
+        end,
 }
