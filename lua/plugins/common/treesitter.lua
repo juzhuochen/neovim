@@ -7,7 +7,7 @@ return {
   },
   config = function() 
     require("nvim-treesitter.configs").setup {
-      ensure_installed = { "c","cpp", "lua", "vim", "vimdoc", "query","cuda","json","dockerfile" },
+      ensure_installed = { "c","cpp", "lua", "vim", "vimdoc", "cuda","json" },
 
       sync_install = false,
       auto_install = true,
