@@ -31,13 +31,13 @@ vim.opt.ignorecase = true
 
 vim.opt.smartcase = true
 
+--cusor line
 vim.opt.cursorline = true
 
 --clipboard
 
-vim.opt.scrolloff = 999
 
-vim.opt.clipboard = "unnamedplus"
+vim.opt.clipboard:append("unnamedplus") 
 
 vim.opt.inccommand = "split"
 
@@ -48,7 +48,9 @@ vim.opt.background = "dark"
 
 vim.opt.signcolumn = "yes"
 
---
+vim.opt.backspace = "indent,eol,start"
 
+--turn of swapfile
+vim.opt.swapfile = false
 
 
