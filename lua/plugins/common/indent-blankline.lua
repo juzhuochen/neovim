@@ -1,6 +1,7 @@
 return {
   "lukas-reineke/indent-blankline.nvim",
   event = { "BufReadPre","BufNewFile"},
+  main = "ibl",
   config = function()
     require("ibl").setup({
       enabled = true,
@@ -9,7 +10,7 @@ return {
         char = "┊",
         smart_indent_cap = true,
         repeat_linebreak = false,
-      },
+        },
       whitespace = {
         remove_blankline_trail = false,
       },
