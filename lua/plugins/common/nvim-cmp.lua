@@ -17,6 +17,33 @@ return {
 
   },
   config = function()
+    local cmp_kinds = {
+      Text = '  ',
+      Method = '  ',
+      Function = '  ',
+      Constructor = '  ',
+      Field = '  ',
+      Variable = '  ',
+      Class = '  ',
+      Interface = '  ',
+      Module = '  ',
+      Property = '  ',
+      Unit = '  ',
+      Value = '  ',
+      Enum = '  ',
+      Keyword = '  ',
+      Snippet = '  ',
+      Color = '  ',
+      File = '  ',
+      Reference = '  ',
+      Folder = '  ',
+      EnumMember = '  ',
+      Constant = '  ',
+      Struct = '  ',
+      Event = '  ',
+      Operator = '  ',
+      TypeParameter = '  ',
+    }
     local cmp = require("cmp")
 
     local luasnip = require("luasnip")
@@ -25,6 +52,9 @@ return {
 
     require("luasnip.loaders.from_vscode").lazy_load()
     cmp.setup({
+      view = {            
+        entries = "custom" -- can be "custom", "wildmenu" or "native"
+      }, 
       completion = {
         completeopt = "menu,menuone,preview,noselect",
       },
@@ -49,16 +79,26 @@ return {
     }),
     -- vs-code like completion menu 
     formatting = {
-      format = lspkind.cmp_format({
-      maxwidth = 50, -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
-                     -- can also be a function to dynamically calculate max width such as 
-                     -- maxwidth = function() return math.floor(0.45 * vim.o.columns) end,
-      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
-      show_labelDetails = true, -- show labelDetails in menu. Disabled by default
-    })
-  }
-
+      fields = { "kind", "abbr" },
+      format = function(_, vim_item)
+        vim_item.kind = cmp_kinds[vim_item.kind] or ""
+        return vim_item
+      end,
+    },
+    sorting = {
+      comparators = {
+        cmp.config.compare.offset,
+        cmp.config.compare.exact,
+        cmp.config.compare.recently_used,
+        require("clangd_extensions.cmp_scores"),
+        cmp.config.compare.kind,
+        cmp.config.compare.sort_text,
+        cmp.config.compare.length,
+        cmp.config.compare.order,
+      },
+    },
   })
+
 
 end,
 }
