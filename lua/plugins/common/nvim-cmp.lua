@@ -52,9 +52,9 @@ return {
 
     require("luasnip.loaders.from_vscode").lazy_load()
     cmp.setup({
-      view = {            
+      view = {
         entries = "custom" -- can be "custom", "wildmenu" or "native"
-      }, 
+      },
       completion = {
         completeopt = "menu,menuone,preview,noselect",
       },
