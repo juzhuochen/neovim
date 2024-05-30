@@ -5,6 +5,7 @@ This repository contains my personal NeoVim configuration.
 ## Features
 
 - Uses `lazy` as the plugin manager.
+- Uses 'Mason' as the Lsp manager.
 - Well-structured configuration files.
 
 ## Installation
@@ -19,7 +20,8 @@ Dependencies
 
 This configuration depends on the following Language Server Protocols (LSPs):
 
-clangd for C++, CUDA
+already use clangd for C++, CUDA
+
 
 Future Work
 Some other functions are still under development and coming soon.
