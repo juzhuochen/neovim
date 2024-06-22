@@ -37,7 +37,8 @@ vim.opt.cursorline = true
 --clipboard
 
 
-vim.opt.clipboard:append("unnamedplus") 
+vim.opt.clipboard = "unnamedplus"
+
 
 vim.opt.inccommand = "split"
 
