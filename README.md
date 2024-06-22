@@ -1,4 +1,3 @@
-```markdown
 # Neovim Configuration
 
 This repository contains my personal Neovim configuration. You can clone it directly into your Neovim configuration directory with the following command:
