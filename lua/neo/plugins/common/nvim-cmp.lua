@@ -8,6 +8,7 @@ return {
     "hrsh7th/cmp-path",
     {
       "L3MON4D3/LuaSnip",
+      version = "v2.*",
       build = "make install_jsregexp"
     },
     "saadparwaiz1/cmp_luasnip",
@@ -79,11 +80,10 @@ return {
     }),
     -- vs-code like completion menu 
     formatting = {
-      fields = { "kind", "abbr" },
-      format = function(_, vim_item)
-        vim_item.kind = cmp_kinds[vim_item.kind] or ""
-        return vim_item
-      end,
+      format = lspkind.cmp_format({
+        maxwidth = 50,
+        ellipsis_char = "...",
+      })
     },
     sorting = {
       comparators = {

@@ -21,13 +21,13 @@ return {
       overrides = function(colors)
         return {}
       end,
-      theme = "wave",
+      theme = "dragon",
       background = {
-        dark = "wave",           -- try "dragon" !
+        dark = "dragon",           -- try "dragon" !
         light = "lotus"
       },
     })
 
-    vim.cmd.colorscheme("kanagawa-wave")
+    vim.cmd.colorscheme("kanagawa-dragon")
   end,
 }
