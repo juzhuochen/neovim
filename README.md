@@ -42,10 +42,10 @@ Here’s a brief description of the main plugins included in this configuration:
 
 This configuration includes a transparent background for a sleek, modern look. To enable transparency:
 
-1. Make sure you have enabled the transparent background plugin:
+1. Enabled the transparent background plugin in nvim:
 
-```lua
-require("plugins.theme.transparent")
+```bash
+:TransparentEnable 
 ```
 
 2. Additionally, you can customize the transparency level in `lua/plugins/theme/transparent.lua`.
@@ -55,7 +55,7 @@ require("plugins.theme.transparent")
 The `kanagawa` colorscheme is used for a beautiful and balanced theme with soft colors. You can enable the theme by adding the following to your configuration:
 
 ```lua
-vim.cmd("colorscheme kanagawa")
+vim.cmd.colorscheme("kanagawa-dragon")
 ```
 
 You can further customize the theme by editing the `lua/plugins/theme/kanagawa.lua` file, where you can adjust the color palette and other settings.
