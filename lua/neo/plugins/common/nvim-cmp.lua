@@ -17,33 +17,6 @@ return {
 
   },
   config = function()
-    local cmp_kinds = {
-      Text = '  ',
-      Method = '  ',
-      Function = '  ',
-      Constructor = '  ',
-      Field = '  ',
-      Variable = '  ',
-      Class = '  ',
-      Interface = '  ',
-      Module = '  ',
-      Property = '  ',
-      Unit = '  ',
-      Value = '  ',
-      Enum = '  ',
-      Keyword = '  ',
-      Snippet = '  ',
-      Color = '  ',
-      File = '  ',
-      Reference = '  ',
-      Folder = '  ',
-      EnumMember = '  ',
-      Constant = '  ',
-      Struct = '  ',
-      Event = '  ',
-      Operator = '  ',
-      TypeParameter = '  ',
-    }
     local cmp = require("cmp")
     local luasnip = require("luasnip")
     local lspkind = require("lspkind")
@@ -51,15 +24,14 @@ return {
     require("luasnip.loaders.from_vscode").lazy_load()
 
     cmp.setup({
-
-    sources = cmp.config.sources({
-      { name = "nvim_lsp"},
-      { name = "luasnip" },
-      { name = "buffer" },
-      { name = "path" },
-    }),
+      sources = cmp.config.sources({
+        { name = "nvim_lsp"},
+        { name = "luasnip" },
+        { name = "buffer" },
+        { name = "path" },
+      }),
       view = {
-        entries = "custom" -- can be "custom", "wildmenu" or "native"
+        entries = "custom"
       },
       completion = {
         completeopt = "menu,menuone,preview,noselect",
