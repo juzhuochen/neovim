@@ -54,4 +54,4 @@ vim.opt.backspace = "indent,eol,start"
 --turn of swapfile
 vim.opt.swapfile = false
 
-
+vim.lsp.inlay_hint.enable(true)
