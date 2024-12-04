@@ -13,13 +13,20 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("neo.plugins",{
+require("lazy").setup({import = "neo.plugins"},{
+  install = {
+    missing = true,
+  },
   checker = {
     enable = true,
     notify = false,
   },
   change_detection = {
+    enable = true,
     notify = false,
   },
+  ui = {
+    border = "rounded"
+  }
 })
 
