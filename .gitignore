@@ -1,0 +1,25 @@
+# Neovim temporary files
+*.swp
+*.swo
+*~
+
+# Plugin manager
+lazy-lock.json
+
+# LSP logs
+lsp.log
+
+# Mason installations
+.mason/
+
+# Temporary directories
+.tmp/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+.claude/

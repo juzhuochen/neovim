@@ -37,6 +37,8 @@ vim.opt.smartcase = true
 --cusor line
 vim.opt.cursorline = true
 
+vim.opt.scrolloff = 999
+
 --clipboard
 
 
